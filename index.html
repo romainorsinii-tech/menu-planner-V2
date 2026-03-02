@@ -100,6 +100,28 @@
                 </select>
             </div>
 
+<!-- Dans la section Préférences hebdomadaires, après la sélection de saison -->
+<div class="preference-row">
+    <label for="weekSeason">Saison pour la semaine :</label>
+    <select id="weekSeason" required>
+        <option value="printemps">Printemps</option>
+        <option value="ete">Été</option>
+        <option value="automne">Automne</option>
+        <option value="hiver">Hiver</option>
+        <option value="toutes">Toutes saisons</option>
+    </select>
+</div>
+
+<!-- Nouvelle option : Pas de repas le midi -->
+<div class="preference-row checkbox-row">
+    <label class="checkbox-label">
+        <input type="checkbox" id="noLunchWeek"> 
+        <span>🚫 Pas de repas pour le midi (toute la semaine)</span>
+    </label>
+</div>
+
+
+
             <!-- Configuration par repas -->
             <div class="meals-configuration">
                 <h3>Configuration des repas</h3>
