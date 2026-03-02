@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planificateur de Menus Hebdomadaires</title>
@@ -18,7 +19,7 @@
             <form id="typeForm" class="type-form">
                 <input type="text" id="typeName" placeholder="Nouveau type de plat (ex: Barbecue, Wok, etc.)" required>
                 <input type="color" id="typeColor" value="#667eea" title="Couleur du tag">
-                <button type="submit">➕ Ajouter un type</button>
+                <button type="submit" class="btn-primary">➕ Ajouter un type</button>
             </form>
             
             <div class="types-list" id="typesList">
@@ -39,15 +40,16 @@
         </select>
     </div>
     
-    <div class="data-buttons">
-        <button id="exportDataBtn" class="data-btn export-btn">
-            ⬇️ Exporter
-        </button>
-        <label for="importFile" class="data-btn import-btn">
-            ⬆️ Importer
-        </label>
-        <input type="file" id="importFile" accept=".json,.csv" style="display: none;">
-    </div>
+<div class="data-buttons">
+    <button id="exportDataBtn" class="data-btn export-btn">
+        ⬇️ Exporter
+    </button>
+    <label for="importFile" class="data-btn import-btn">
+        ⬆️ Importer
+    </label>
+    <input type="file" id="importFile" accept=".json,.csv" style="display: none;">
+</div>
+  
     
     <div class="format-info">
         <small>
@@ -94,7 +96,7 @@
                     </div>
                 </div>
 
-                <button type="submit">Ajouter le plat</button>
+                <button type="submit" class="btn-primary">Ajouter le plat</button>
             </form>
             
             <div class="favorites-list" id="favoritesList">
@@ -136,7 +138,8 @@
                 </div>
             </div>
 
-            <button id="generatePlanBtn" class="generate-btn">Générer le planning</button>
+            
+<button id="generatePlanBtn" class="btn-success generate-btn">Générer le planning</button>
         </section>
 
         <!-- Section Planning de la semaine -->
