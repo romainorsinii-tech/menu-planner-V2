@@ -26,23 +26,41 @@
             </div>
       
 
-    <!-- Boutons d'export/import -->
-    <div class="data-management">
-        <h3>💾 Sauvegarde des données</h3>
-        <div class="data-buttons">
-            <button id="exportDataBtn" class="data-btn export-btn">
-                ⬇️ Exporter mes plats
-            </button>
-            <label for="importFile" class="data-btn import-btn">
-                ⬆️ Importer des plats
-            </label>
-            <input type="file" id="importFile" accept=".json" style="display: none;">
-        </div>
-        <p class="data-help">
-            L'export crée un fichier JSON avec tous vos plats et types personnalisés.<br>
-            L'import vous permet de restaurer ou fusionner des données.
-        </p>
+<!-- Section de gestion des données -->
+<div class="data-management">
+    <h3>💾 Sauvegarde des données</h3>
+    
+    <!-- Choix du format d'export -->
+    <div class="format-selector">
+        <label for="exportFormat">Format d'export :</label>
+        <select id="exportFormat">
+            <option value="json">JSON (complet)</option>
+            <option value="csv">CSV (tableur)</option>
+        </select>
     </div>
+    
+    <div class="data-buttons">
+        <button id="exportDataBtn" class="data-btn export-btn">
+            ⬇️ Exporter
+        </button>
+        <label for="importFile" class="data-btn import-btn">
+            ⬆️ Importer
+        </label>
+        <input type="file" id="importFile" accept=".json,.csv" style="display: none;">
+    </div>
+    
+    <div class="format-info">
+        <small>
+            📄 <strong>JSON</strong> : Sauvegarde complète (plats + types + couleurs)<br>
+            📊 <strong>CSV</strong> : Pour ouvrir dans Excel / Google Sheets
+        </small>
+    </div>
+    
+    <p class="data-help">
+        L'export crée un fichier avec tous vos plats et types.<br>
+        L'import accepte les fichiers JSON et CSV.
+    </p>
+</div>   
 </section>
 
         <!-- Section Gestion des plats favoris -->
