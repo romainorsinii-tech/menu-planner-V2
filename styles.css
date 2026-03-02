@@ -1,0 +1,116 @@
+/* Section de gestion des types */
+.types-section {
+  background: linear-gradient(135deg, #f6f9fc 0%, #e6f0f5 100%);
+  border-left: 4px solid #48bb78;
+}
+
+.type-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.type-form input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.type-form input[type="color"] {
+  width: 50px;
+  height: 40px;
+  padding: 2px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.type-form button {
+  padding: 10px 20px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.type-form button:hover {
+  background: #38a169;
+}
+
+.types-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.type-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+}
+
+.type-tag .color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.type-tag .type-name {
+  font-weight: 500;
+}
+
+.type-tag .delete-type {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.type-tag .delete-type:hover {
+  color: #ff4444;
+}
+
+/* Styles pour les checkbox de types personnalisés */
+.custom-type-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  font-size: 13px;
+}
+
+.custom-type-checkbox input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Badge pour les types dans les plats */
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}

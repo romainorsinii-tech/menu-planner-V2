@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificateur de Menus Hebdomadaires</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ Planificateur de Menus Hebdomadaires</h1>
+        </header>
+
+        <!-- Section Gestion des types de plats -->
+        <section class="types-section">
+            <h2>📋 Gestion des types de plats</h2>
+            <form id="typeForm" class="type-form">
+                <input type="text" id="typeName" placeholder="Nouveau type de plat (ex: Barbecue, Wok, etc.)" required>
+                <input type="color" id="typeColor" value="#667eea" title="Couleur du tag">
+                <button type="submit">➕ Ajouter un type</button>
+            </form>
+            
+            <div class="types-list" id="typesList">
+                <!-- Les types personnalisés apparaîtront ici -->
+            </div>
+        </section>
+
+        <!-- Section Gestion des plats favoris -->
+        <section class="favorites-section">
+            <h2>❤️ Mes plats favoris</h2>
+            <form id="dishForm" class="dish-form">
+                <input type="text" id="dishName" placeholder="Nom du plat" required>
+                
+                <div class="multi-select-group">
+                    <label>Saisons :</label>
+                    <div class="checkbox-group" id="seasonsGroup">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="season" value="printemps"> Printemps
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="season" value="ete"> Été
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="season" value="automne"> Automne
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="season" value="hiver"> Hiver
+                        </label>
+                    </div>
+                </div>
+
+                <div class="multi-select-group">
+                    <label>Types de plat :</label>
+                    <div class="checkbox-group" id="typesGroup">
+                        <!-- Les types personnalisés seront générés ici -->
+                    </div>
+                </div>
+
+                <button type="submit">Ajouter le plat</button>
+            </form>
+            
+            <div class="favorites-list" id="favoritesList">
+                <!-- Les plats favoris seront affichés ici -->
+            </div>
+        </section>
+
+        <!-- Section Préférences hebdomadaires -->
+        <section class="weekly-preferences">
+            <h2>📅 Préférences pour la semaine</h2>
+            
+            <!-- Saison globale pour la semaine -->
+            <div class="preference-row">
+                <label for="weekSeason">Saison pour la semaine :</label>
+                <select id="weekSeason" required>
+                    <option value="printemps">Printemps</option>
+                    <option value="ete">Été</option>
+                    <option value="automne">Automne</option>
+                    <option value="hiver">Hiver</option>
+                    <option value="toutes">Toutes saisons</option>
+                </select>
+            </div>
+
+            <!-- Configuration par repas -->
+            <div class="meals-configuration">
+                <h3>Configuration des repas</h3>
+                <div class="config-grid" id="mealsConfig">
+                    <!-- Généré par JavaScript -->
+                </div>
+            </div>
+
+            <button id="generatePlanBtn" class="generate-btn">Générer le planning</button>
+        </section>
+
+        <!-- Section Planning de la semaine -->
+        <section class="weekly-planning" id="weeklyPlanning" style="display: none;">
+            <h2>📊 Planning de la semaine</h2>
+            <div class="planning-grid" id="planningGrid">
+                <!-- Le planning sera généré ici -->
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
